@@ -6,23 +6,35 @@ public class Main {
 
     public static void main(String[] args) {
 
-       Scanner in = new Scanner(System.in);
-       System.out.println("Enter f: ");
-       String input = in.nextLine();
+        Country rvalue = Country.RUSSIA;
+        Country uvalue = Country.USA;
+        Country cvalue = Country.CANADA;
 
-       Country rvalue = Country.RUSSIA; // Первый способ создания объекта
-       Country uvalue = Country.valueOf(Country.class, "USA"); // Второй способ создания объекта
-       System.out.println(rvalue + " " + uvalue); // Выводим созданные объекты
+        rvalue.rvalue();
+        uvalue.uvalue();
+        cvalue.cvalue();
 
-       rvalue.name(); // Выводит имя нашего объекта
-       System.out.println(rvalue.name());
+//        Scanner in = new Scanner(System.in);
+//        System.out.println("Enter f: ");
+//        String input = in.nextLine();
 
-       for (Country i: Country.values()) {
-           System.out.println(i);
-       }
+         // Первый способ создания объекта
+//        System.out.println(rvalue.getRuName());
+//        System.out.println(rvalue.isOpen());
 
+
+//       Country uvalue = Country.valueOf(Country.class, "USA"); // Второй способ создания объекта
+//       System.out.println(rvalue + " " + uvalue); // Выводим созданные объекты
+
+//       rvalue.name(); // Выводит имя нашего объекта
+//       System.out.println(rvalue.name());
+
+//       for (Country i: Country.values()) {
+//           System.out.println(i);
     }
+
 }
+
 /*
 + 1. Создать enum Country:
   1.1. Элементы - различные страны, придумайте сами.
