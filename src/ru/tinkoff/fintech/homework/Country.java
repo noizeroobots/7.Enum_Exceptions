@@ -21,7 +21,14 @@ public enum Country {
         return isOpen;
     }
 
-//    public void foo(){ // Создаем обычный метод и у каждого объекта можем его вызвать
+    @Override
+    public String toString() {
+        return Country.values() +" Country {" +
+                " ruName = '" + ruName + '\'' +
+                '}';
+    }
+
+    //    public void foo(){ // Создаем обычный метод и у каждого объекта можем его вызвать
 //        System.out.println(Country.RUSSIA + " " + "(" + Country.RUSSIA.getRuName() + ")");
 //        System.out.println(Country.USA + " " + "(" + Country.USA.getRuName() + ")");
 //        System.out.println(Country.CANADA + " " + "(" + Country.CANADA.getRuName() + ")");
