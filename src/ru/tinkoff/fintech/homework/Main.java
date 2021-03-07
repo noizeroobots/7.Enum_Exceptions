@@ -14,9 +14,9 @@ public class Main {
         System.out.println(uvalue.name() + " " + Country.USA.toString());
         System.out.println(cvalue.name() + " " + Country.CANADA.toString() + "\n");
 
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("Enter f: ");
-//        String input = in.nextLine();
+        Scanner in = new Scanner(System.in); // п.3.
+        System.out.println("Enter the name of the chosen country: ");
+        String input = in.nextLine();
 
          // Первый способ создания объекта
 //        System.out.println(rvalue.getRuName());
