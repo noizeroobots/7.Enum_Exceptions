@@ -1,31 +1,22 @@
 package ru.tinkoff.fintech.homework;
 
-public enum Country {
+public enum Country { // п. 1.
     RUSSIA("Россия", true),
     USA("США", true),
     CANADA("Канада", true); // Объявляем объекты, а создаём объекты (объекты перечисления) в Main
 
-    private final String ruName; // отвечает за наименование на русском
-    private final boolean isOpen; // отвечает за то, открыта ли для посещения
+    private final String ruName; // п. 1.2.
+    private final boolean isOpen; // п. 1.2.
 
-    Country(String ruName, boolean isOpen) {
+    Country(String ruName, boolean isOpen) { // п.1.2.1.
         this.ruName = ruName;
         this.isOpen = isOpen;
     }
 
-    public String getRuName() {
-        return ruName;
-    }
-
-    public boolean isOpen() {
-        return isOpen;
-    }
 
     @Override
     public String toString() {
-        return Country.values() +" Country {" +
-                " ruName = '" + ruName + '\'' +
-                '}';
+        return "(" + ruName + ")";
     }
 
     //    public void foo(){ // Создаем обычный метод и у каждого объекта можем его вызвать
@@ -34,25 +25,5 @@ public enum Country {
 //        System.out.println(Country.CANADA + " " + "(" + Country.CANADA.getRuName() + ")");
 //    }
 
-    public void rvalue() { // Создаем обычный метод и у каждого объекта можем его вызвать
-
-        if (Country.RUSSIA.equals(RUSSIA)) {
-            System.out.println(Country.RUSSIA + " " + "(" + Country.RUSSIA.getRuName() + ")");
-        }
-    }
-
-    public void uvalue() {
-
-        if (Country.USA.equals(USA)) {
-            System.out.println(Country.USA + " " + "(" + Country.USA.getRuName() + ")");
-        }
-    }
-
-    public void cvalue() {
-
-        if (Country.CANADA.equals(CANADA)) {
-            System.out.println(Country.CANADA + " " + "(" + Country.CANADA.getRuName() + ")");
-        }
-    }
 }
 

@@ -10,9 +10,9 @@ public class Main {
         Country uvalue = Country.USA;
         Country cvalue = Country.CANADA;
 
-        rvalue.rvalue();
-        uvalue.uvalue();
-        cvalue.cvalue();
+        System.out.println(rvalue.name() + " " + Country.RUSSIA.toString());
+        System.out.println(uvalue.name() + " " + Country.USA.toString());
+        System.out.println(cvalue.name() + " " + Country.CANADA.toString() + "\n");
 
 //        Scanner in = new Scanner(System.in);
 //        System.out.println("Enter f: ");
