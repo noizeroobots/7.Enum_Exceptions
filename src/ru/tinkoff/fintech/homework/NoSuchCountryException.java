@@ -2,7 +2,7 @@ package ru.tinkoff.fintech.homework;
 
 public class NoSuchCountryException {
 
-    public void getSize(String input) {
+    public final void getSize(final String input) {
 
         SizeOfName sizeOfName = new SizeOfName();
 

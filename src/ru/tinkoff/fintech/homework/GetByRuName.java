@@ -4,21 +4,17 @@ import java.util.Scanner;
 
 public class GetByRuName {
 
-
     public static void getByRuName() {
 
         Country rvalue = Country.RUSSIA;
         Country uvalue = Country.USA;
         Country cvalue = Country.CANADA;
 
-
         Scanner in = new Scanner(System.in); // п.3.
         System.out.println("Enter the name of the chosen country: ");
         String input = in.nextLine();
 
-
         NoSuchCountryException sizeName = new NoSuchCountryException();
-
 
         switch (input) {
             case ("RUSSIA"):
@@ -36,7 +32,6 @@ public class GetByRuName {
             default:
                 sizeName.getSize(input);
         }
-
     }
 
 
