@@ -1,24 +1,18 @@
 package ru.tinkoff.fintech.homework;
 
-import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Country rvalue = Country.RUSSIA;
-
         for (Country country : Country.values()) { // пункт 2
             System.out.println(country.name() + " " + country.toString());
         }
 
-        Scanner in = new Scanner(System.in); // п.3.
-        System.out.println("Enter the name of the chosen country: ");
-        String input = in.nextLine();
+        GetByRuName show = new GetByRuName();
+        show.getByRuName();
 
-        if (input.contains("RUSSIA")) { // пункт 4 реализовано
-            System.out.println("Страна [" + rvalue.name() + "] " + Country.valueOf("RUSSIA") + " открыта для посещения");
-        }
+
     }
 
 //        switch (input) {
