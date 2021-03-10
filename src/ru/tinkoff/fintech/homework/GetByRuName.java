@@ -11,15 +11,16 @@ public class GetByRuName {
         Country cvalue = Country.CANADA;
 
         Scanner in = new Scanner(System.in); // п.3.
-        System.out.println("Enter the name of the chosen country: ");
+        System.out.print("Введите название страны: ");
         String input = in.nextLine();
 
-        NoSuchCountryException sizeName = new NoSuchCountryException();
+        SizeException sizeName = new SizeException();
+
 
         switch (input) {
             case ("RUSSIA"):
             case ("Россия"):
-                System.out.println(rvalue.name());
+                System.out.println(rvalue.name() + rvalue.isOpen());
                 break;
             case ("USA"):
             case ("США"):
@@ -32,6 +33,16 @@ public class GetByRuName {
             default:
                 sizeName.getSize(input);
         }
+        System.out.println("checkpoint 4");
+        if (input.equals("")){
+            System.out.println("Вы ввели ни один символ");
+        }
+        if (rvalue.isOpen()) {
+            System.out.println(" открыта для посещения");
+        } else {
+            System.out.println(" закрыта для посещения");
+        }
+
     }
 
 

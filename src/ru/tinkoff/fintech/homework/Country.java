@@ -8,7 +8,7 @@ public enum Country { // п. 1.
     private final String ruName; // п. 1.2.
     private final boolean isOpen; // п. 1.2.
 
-    Country(final String ruName, final boolean isOpen) { // п.1.2.1.
+    Country(final String ruName, final boolean isOpen) { // п.1.3
         this.ruName = ruName;
         this.isOpen = isOpen;
     }
@@ -18,9 +18,10 @@ public enum Country { // п. 1.
         return "(" + ruName + ")";
     }
 
-//        if (input.contains("RUSSIA")) { // пункт 4 реализовано
-//            System.out.println("Страна [" + rvalue.name() + "] " + Country.valueOf("RUSSIA") + " открыта для посещения");
-//        }
+    public boolean isOpen() {
+        return isOpen;
+    }
+
 
 }
 
