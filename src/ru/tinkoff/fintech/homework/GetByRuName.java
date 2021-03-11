@@ -17,17 +17,14 @@ public class GetByRuName {
 
         switch (input) {
             case ("Россия"):
-                System.out.println(input);
                 System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
                 System.out.println("Страна [" + getInformation(rvalue));
                 break;
             case ("США"):
-                System.out.println(input);
                 System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
                 System.out.println("Страна [" + getInformation(uvalue));
                 break;
             case ("Канада"):
-                System.out.println(input);
                 System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
                 System.out.println("Страна [" + getInformation(cvalue));
                 break;
@@ -60,8 +57,10 @@ public class GetByRuName {
         try {
             sizeOfName.checkName(input);
         } catch (NoSuchCountryException e) {
+            System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
             System.err.println(e.getMessage());
         } catch (IncorrectInputException e) {
+            System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
             System.err.println(e.getMessage());
         }
     }
