@@ -60,9 +60,9 @@ public class GetByRuName {
         try {
             sizeOfName.checkName(input);
         } catch (NoSuchCountryException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         } catch (IncorrectInputException e) {
-            System.out.println(e.getMessage());
+            System.err.println(e.getMessage());
         }
     }
 }
