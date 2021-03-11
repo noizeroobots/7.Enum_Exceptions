@@ -13,7 +13,7 @@ public class Main {
         GetByRuName show = new GetByRuName();
         show.getByRuName();
 
-        System.out.println("checkpoint 3");
+        System.out.println("checkpoint 4");
 
 
     }

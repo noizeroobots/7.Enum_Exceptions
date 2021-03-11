@@ -1,7 +1,7 @@
 package ru.tinkoff.fintech.homework;
 
 public enum Country { // п. 1.
-    RUSSIA("Россия", true),
+    RUSSIA("Россия", false),
     USA("США", true),
     CANADA("Канада", true); // Объявляем объекты, а создаём объекты (объекты перечисления) в Main
 

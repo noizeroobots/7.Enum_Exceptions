@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class GetByRuName {
 
+    @SuppressWarnings("checkstyle:WhitespaceAround")
     public static void getByRuName() {
 
         Country rvalue = Country.RUSSIA;
@@ -14,36 +15,53 @@ public class GetByRuName {
         System.out.print("Введите название страны: ");
         String input = in.nextLine();
 
-        SizeException sizeName = new SizeException();
-
 
         switch (input) {
-            case ("RUSSIA"):
             case ("Россия"):
-                System.out.println(rvalue.name() + rvalue.isOpen());
+                System.out.println(getInformation(rvalue));
                 break;
-            case ("USA"):
             case ("США"):
-                System.out.println(uvalue.name());
+                System.out.println(getInformation(uvalue));
                 break;
-            case ("CANADA"):
             case ("Канада"):
-                System.out.println(cvalue.name());
+                System.out.println(getInformation(cvalue));
                 break;
             default:
-                sizeName.getSize(input);
+                try {
+                    Country country = Country.valueOf(input);
+                    System.out.println(getInformation(country));
+                } catch (IllegalArgumentException e) {
+                    checkInput(input);
+                }
         }
-        System.out.println("checkpoint 4");
-        if (input.equals("")){
-            System.out.println("Вы ввели ни один символ");
-        }
-        if (rvalue.isOpen()) {
-            System.out.println(" открыта для посещения");
-        } else {
-            System.out.println(" закрыта для посещения");
-        }
+        System.out.println("checkpoint 3");
 
     }
 
+    private static String getInformation(final Country country){
+
+        String result = country.name();
+
+        if (country.isOpen()){
+            result += " открыта для посещения";
+        } else {
+            result += " закрыта для посещения";
+        }
+
+        return result;
+    }
+    public static void checkInput(final String input) {
+
+        SizeOfName sizeOfName = new SizeOfName();
+
+        try {
+            sizeOfName.checkName(input);
+        } catch (NoSuchCountryException e) {
+//
+            System.out.println("Страны \'" + input + "\' не существует");
+        } catch (IncorrectInputException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 
 }
