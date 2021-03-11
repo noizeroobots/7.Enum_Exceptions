@@ -5,4 +5,3 @@ public class IncorrectInputException extends Exception {
         super(message);
     }
 }
-/* Собственное checked исключение основано на вводе страны с длиной 0 символов */

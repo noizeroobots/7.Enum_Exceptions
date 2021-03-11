@@ -11,45 +11,48 @@ public class GetByRuName {
         Country uvalue = Country.USA;
         Country cvalue = Country.CANADA;
 
-        Scanner in = new Scanner(System.in); // п.3.
+        Scanner in = new Scanner(System.in);
         System.out.print("Введите название страны: ");
         String input = in.nextLine();
 
-
         switch (input) {
             case ("Россия"):
-                System.out.println(getInformation(rvalue));
+                System.out.println(input);
+                System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
+                System.out.println("Страна [" + getInformation(rvalue));
                 break;
             case ("США"):
-                System.out.println(getInformation(uvalue));
+                System.out.println(input);
+                System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
+                System.out.println("Страна [" + getInformation(uvalue));
                 break;
             case ("Канада"):
-                System.out.println(getInformation(cvalue));
+                System.out.println(input);
+                System.out.println("Наименование страны на английском введено некорректно, нужно русское название...");
+                System.out.println("Страна [" + getInformation(cvalue));
                 break;
             default:
                 try {
                     Country country = Country.valueOf(input);
-                    System.out.println(getInformation(country));
+                    System.out.println("Страна [" + getInformation(country) + " ");
                 } catch (IllegalArgumentException e) {
                     checkInput(input);
                 }
         }
-        System.out.println("checkpoint 3");
-
     }
 
-    private static String getInformation(final Country country){
+    private static String getInformation(final Country country) {
 
-        String result = country.name();
+        String result = country.name() + " " + country.toString() + "]";
 
-        if (country.isOpen()){
+        if (country.isOpen()) {
             result += " открыта для посещения";
         } else {
             result += " закрыта для посещения";
         }
-
         return result;
     }
+
     public static void checkInput(final String input) {
 
         SizeOfName sizeOfName = new SizeOfName();
@@ -57,11 +60,9 @@ public class GetByRuName {
         try {
             sizeOfName.checkName(input);
         } catch (NoSuchCountryException e) {
-//
-            System.out.println("Страны \'" + input + "\' не существует");
+            System.out.println(e.getMessage());
         } catch (IncorrectInputException e) {
             System.out.println(e.getMessage());
         }
     }
-
 }

@@ -1,14 +1,14 @@
 package ru.tinkoff.fintech.homework;
 
-public enum Country { // п. 1.
+public enum Country {
     RUSSIA("Россия", false),
     USA("США", true),
-    CANADA("Канада", true); // Объявляем объекты, а создаём объекты (объекты перечисления) в Main
+    CANADA("Канада", true);
 
-    private final String ruName; // п. 1.2.
-    private final boolean isOpen; // п. 1.2.
+    private final String ruName;
+    private final boolean isOpen;
 
-    Country(final String ruName, final boolean isOpen) { // п.1.3
+    Country(final String ruName, final boolean isOpen) {
         this.ruName = ruName;
         this.isOpen = isOpen;
     }
@@ -17,11 +17,8 @@ public enum Country { // п. 1.
     public String toString() {
         return "(" + ruName + ")";
     }
-
     public boolean isOpen() {
         return isOpen;
     }
-
-
 }
 

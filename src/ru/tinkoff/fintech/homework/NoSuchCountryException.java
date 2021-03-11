@@ -5,4 +5,3 @@ public class NoSuchCountryException extends Exception {
         super(message);
     }
 }
-/* Собственное checked исключение основано на вводе страны с длиной 0 символов */
